@@ -1,0 +1,618 @@
+/* Romantic Color Palette */
+:root {
+    --background: hsl(350, 50%, 98%);
+    --foreground: hsl(340, 15%, 25%);
+    --card: hsl(350, 40%, 96%);
+    --card-foreground: hsl(340, 15%, 25%);
+    --primary: hsl(340, 75%, 75%);
+    --primary-foreground: hsl(350, 50%, 98%);
+    --secondary: hsl(270, 40%, 85%);
+    --secondary-foreground: hsl(340, 15%, 25%);
+    --muted: hsl(20, 25%, 92%);
+    --muted-foreground: hsl(340, 10%, 50%);
+    --accent: hsl(15, 75%, 82%);
+    --accent-foreground: hsl(340, 15%, 25%);
+    --border: hsl(340, 30%, 88%);
+    --radius: 1rem;
+    
+    /* Romantic Gradients */
+    --gradient-romantic: linear-gradient(135deg, hsl(340, 75%, 85%), hsl(270, 40%, 90%), hsl(20, 60%, 90%));
+    --gradient-soft: linear-gradient(180deg, hsl(350, 50%, 98%), hsl(340, 30%, 95%));
+    --gradient-card: linear-gradient(145deg, hsl(350, 40%, 97%), hsl(340, 35%, 94%));
+    
+    /* Romantic Shadows */
+    --shadow-romantic: 0 10px 30px -10px hsl(340, 50%, 85%, 0.3);
+    --shadow-card: 0 4px 20px -5px hsl(340, 50%, 80%, 0.25);
+    --shadow-float: 0 8px 25px -8px hsl(270, 40%, 80%, 0.3);
+    
+    /* Animations */
+    --transition-romantic: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--gradient-soft);
+    color: var(--foreground);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition-romantic);
+}
+
+.logo:hover {
+    color: hsl(340, 75%, 65%);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--foreground);
+    font-weight: 500;
+    transition: var(--transition-romantic);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* Main Content */
+.main-content {
+    padding-top: 5rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-romantic);
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--primary-foreground);
+}
+
+.btn-primary:hover {
+    background: hsl(340, 75%, 65%);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--foreground);
+    border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+    background: var(--card);
+    transform: translateY(-1px);
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+/* Card Components */
+.romantic-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-romantic);
+}
+
+.romantic-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-float);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 4xl;
+    margin: 0 auto;
+}
+
+.heart-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--muted-foreground);
+    max-width: 32rem;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Quote Section */
+.quote-section {
+    padding: 4rem 1rem;
+    background: var(--gradient-romantic);
+}
+
+.quote-content {
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sparkles-icon {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.quote-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.quote-author {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.125rem;
+}
+
+/* Actions Section */
+.actions-section {
+    padding: 4rem 1rem;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 4xl;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .actions-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.action-card {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.action-card:hover {
+    transform: scale(1.05);
+}
+
+.action-card .romantic-card {
+    text-align: center;
+    height: 100%;
+}
+
+.action-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.action-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.action-description {
+    color: var(--muted-foreground);
+}
+
+/* Footer Section */
+.footer-section {
+    padding: 3rem 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.footer-subtitle {
+    color: var(--muted-foreground);
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 1rem;
+}
+
+.page-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    color: var(--muted-foreground);
+    font-size: 1.125rem;
+    max-width: 32rem;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Letters Page */
+.letters-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 6xl;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .letters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .letters-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.letter-card {
+    cursor: pointer;
+    transition: var(--transition-romantic);
+}
+
+.letter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.letter-info {
+    flex: 1;
+}
+
+.letter-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.letter-date {
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.letter-icon {
+    font-size: 1.25rem;
+    margin-left: 1rem;
+}
+
+.letter-content {
+    color: var(--foreground);
+    line-height: 1.6;
+}
+
+.letter-preview p {
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.letter-full {
+    space-y: 1rem;
+}
+
+.letter-full p {
+    margin-bottom: 1rem;
+}
+
+.letter-full .btn {
+    margin-top: 1rem;
+}
+
+/* Messages Page */
+.messages-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 4xl;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.message-bubble {
+    background: rgba(hsl(15, 75%, 82%), 0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(hsl(15, 75%, 82%), 0.3);
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: var(--shadow-romantic);
+    font-size: 0.875rem;
+    max-width: 20rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.final-message {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+.final-message-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+/* Dates Page */
+.dates-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 6xl;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .dates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .dates-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.date-card {
+    height: 100%;
+}
+
+.date-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.date-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.date-icon {
+    font-size: 1.5rem;
+}
+
+.date-description {
+    color: var(--foreground);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.date-details {
+    margin-bottom: 1.5rem;
+}
+
+.date-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+}
+
+.detail-icon {
+    font-size: 1rem;
+}
+
+.rsvp-section {
+    margin-top: auto;
+}
+
+.rsvp-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .rsvp-buttons {
+        flex-direction: row;
+    }
+}
+
+.rsvp-thank-you {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(hsl(340, 75%, 75%), 0.1);
+    border-radius: var(--radius);
+    color: var(--primary);
+}
+
+.additional-message {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 0 1rem;
+}
+
+.additional-message .romantic-card {
+    max-width: 24rem;
+    margin: 0 auto;
+}
+
+.additional-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.additional-text {
+    color: var(--muted-foreground);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 640px) {
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+}

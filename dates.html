@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Invitations - Love Notes Corner</title>
+    <meta name="description" content="Special date invitations created with love">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Love Notes Corner</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="letters.html" class="nav-link">Letters</a>
+                    <a href="messages.html" class="nav-link">Messages</a>
+                    <a href="dates.html" class="nav-link active">Dates</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header fade-in">
+                <h1 class="page-title">Date Night Invitations</h1>
+                <p class="page-subtitle">
+                    Special moments I want to share with you. Each invitation is crafted with love 
+                    and the hope of creating beautiful memories together.
+                </p>
+            </div>
+            
+            <div class="dates-grid">
+                <div class="date-card fade-in" style="animation-delay: 0ms;">
+                    <div class="date-header">
+                        <h3 class="date-title">Candlelit Dinner</h3>
+                        <div class="date-icon">🕯️</div>
+                    </div>
+                    <div class="date-content">
+                        <p class="date-description">
+                            Join me for an intimate dinner under the stars. I'll cook your favorite meal, 
+                            and we can talk about our dreams while soft music plays in the background.
+                        </p>
+                        <div class="date-details">
+                            <div class="date-detail">
+                                <span class="detail-icon">📍</span>
+                                <span>Our favorite spot at home</span>
+                            </div>
+                            <div class="date-detail">
+                                <span class="detail-icon">⏰</span>
+                                <span>Saturday, February 14th at 7:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="rsvp-section" id="rsvp-1">
+                            <div class="rsvp-buttons">
+                                <button class="btn btn-primary" onclick="handleRSVP(1, 'yes')">Yes, I'd love to! 💕</button>
+                                <button class="btn btn-outline" onclick="handleRSVP(1, 'maybe')">Maybe ✨</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="date-card fade-in" style="animation-delay: 300ms;">
+                    <div class="date-header">
+                        <h3 class="date-title">Morning Coffee Adventure</h3>
+                        <div class="date-icon">☕</div>
+                    </div>
+                    <div class="date-content">
+                        <p class="date-description">
+                            Let's explore that cozy little café we've been wanting to try. We can share pastries, 
+                            steal kisses over lattes, and plan our next adventure together.
+                        </p>
+                        <div class="date-details">
+                            <div class="date-detail">
+                                <span class="detail-icon">📍</span>
+                                <span>The Cozy Corner Café, Downtown</span>
+                            </div>
+                            <div class="date-detail">
+                                <span class="detail-icon">⏰</span>
+                                <span>Sunday, February 18th at 10:00 AM</span>
+                            </div>
+                        </div>
+                        <div class="rsvp-section" id="rsvp-2">
+                            <div class="rsvp-buttons">
+                                <button class="btn btn-primary" onclick="handleRSVP(2, 'yes')">Yes, I'd love to! 💕</button>
+                                <button class="btn btn-outline" onclick="handleRSVP(2, 'maybe')">Maybe ✨</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="date-card fade-in" style="animation-delay: 600ms;">
+                    <div class="date-header">
+                        <h3 class="date-title">Sunset Beach Walk</h3>
+                        <div class="date-icon">🌅</div>
+                    </div>
+                    <div class="date-content">
+                        <p class="date-description">
+                            I want to watch the sunset with you by the ocean. We'll walk hand in hand, 
+                            collect seashells, and maybe build a sandcastle or two. Don't forget to bring your beautiful smile!
+                        </p>
+                        <div class="date-details">
+                            <div class="date-detail">
+                                <span class="detail-icon">📍</span>
+                                <span>Moonlight Beach</span>
+                            </div>
+                            <div class="date-detail">
+                                <span class="detail-icon">⏰</span>
+                                <span>Friday, February 23rd at 6:30 PM</span>
+                            </div>
+                        </div>
+                        <div class="rsvp-section" id="rsvp-3">
+                            <div class="rsvp-buttons">
+                                <button class="btn btn-primary" onclick="handleRSVP(3, 'yes')">Yes, I'd love to! 💕</button>
+                                <button class="btn btn-outline" onclick="handleRSVP(3, 'maybe')">Maybe ✨</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="additional-message fade-in" style="animation-delay: 900ms;">
+                <div class="romantic-card">
+                    <h3 class="additional-title">More Adventures Await</h3>
+                    <p class="additional-text">
+                        These are just the beginning of all the wonderful dates we'll share. 
+                        Every moment with you is a treasure, and I can't wait to create more memories together.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="dates.js"></script>
+</body>
+</html>

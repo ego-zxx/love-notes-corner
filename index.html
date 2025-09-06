@@ -1,27 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Notes Corner - For My Dearest</title>
-    <meta name="description" content="A romantic corner filled with love letters, sweet messages, and date invitations" />
+    <meta name="description" content="A romantic corner filled with love letters, sweet messages, and date invitations">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <meta name="author" content="Lovable" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Love Notes Corner</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="letters.html" class="nav-link">Letters</a>
+                    <a href="messages.html" class="nav-link">Messages</a>
+                    <a href="dates.html" class="nav-link">Dates</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="love-notes-corner" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <div class="hero-text">
+                        <div class="heart-icon">❤️</div>
+                        <h1 class="hero-title">
+                            Welcome to Our<br>Love Story
+                        </h1>
+                        <p class="hero-subtitle">
+                            This is our special corner of the internet, filled with love letters, 
+                            sweet messages, and invitations to create beautiful memories together.
+                        </p>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="letters.html" class="btn btn-primary">Read My Letters 💕</a>
+                        <a href="messages.html" class="btn btn-outline">Sweet Messages ✨</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        <!-- Romantic Quote Section -->
+        <section class="quote-section">
+            <div class="container">
+                <div class="quote-content fade-in" style="animation-delay: 600ms;">
+                    <div class="sparkles-icon">✨</div>
+                    <blockquote class="quote-text">
+                        "In all the world, there is no heart for me like yours. 
+                        In all the world, there is no love for you like mine."
+                    </blockquote>
+                    <cite class="quote-author">- Maya Angelou</cite>
+                </div>
+            </div>
+        </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        <!-- Quick Actions -->
+        <section class="actions-section">
+            <div class="container">
+                <div class="actions-grid">
+                    <a href="letters.html" class="action-card fade-in">
+                        <div class="action-icon">💕</div>
+                        <h3 class="action-title">Love Letters</h3>
+                        <p class="action-description">Heartfelt letters written just for you, filled with love and dreams</p>
+                    </a>
+                    
+                    <a href="messages.html" class="action-card fade-in" style="animation-delay: 200ms;">
+                        <div class="action-icon">✨</div>
+                        <h3 class="action-title">Sweet Messages</h3>
+                        <p class="action-description">Little thoughts and feelings that make my heart flutter</p>
+                    </a>
+                    
+                    <a href="dates.html" class="action-card fade-in" style="animation-delay: 400ms;">
+                        <div class="action-icon">🌹</div>
+                        <h3 class="action-title">Date Invitations</h3>
+                        <p class="action-description">Special moments I want to create and share with you</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Message -->
+        <section class="footer-section">
+            <div class="container">
+                <div class="footer-content fade-in" style="animation-delay: 800ms;">
+                    <p class="footer-title">
+                        Made with endless love for the most amazing person in my world
+                    </p>
+                    <p class="footer-subtitle">
+                        Every word, every message, every invitation comes straight from my heart to yours
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
 </html>

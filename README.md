@@ -1,73 +1,63 @@
-# Welcome to your Lovable project
+# Love Notes Corner
 
-## Project info
+A romantic personal website with love letters, sweet messages, and date invitations.
 
-**URL**: https://lovable.dev/projects/8981b6b0-b39d-4df6-b1c3-d5f7464a338a
+## Features
 
-## How can I edit this code?
+- **Homepage**: Warm welcome with romantic hero section
+- **Letters**: Expandable love letter cards with full content
+- **Messages**: Floating bubble-style sweet notes
+- **Date Invitations**: Interactive RSVP cards
 
-There are several ways of editing your application.
+## Design
 
-**Use Lovable**
+- Romantic pastel color palette
+- Handwritten fonts (Dancing Script)
+- Smooth fade-in animations
+- Mobile-responsive design
+- Soft gradients and shadows
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8981b6b0-b39d-4df6-b1c3-d5f7464a338a) and start prompting.
+## Files
 
-Changes made via Lovable will be committed automatically to this repo.
+- `index.html` - Homepage
+- `letters.html` - Love letters page
+- `messages.html` - Sweet messages page  
+- `dates.html` - Date invitations page
+- `styles.css` - All styling and animations
+- `letters.js` - Letter toggle functionality
+- `dates.js` - RSVP functionality
 
-**Use your preferred IDE**
+## Customization
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+To add new content, edit the HTML files:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Adding New Letters
+In `letters.html`, copy an existing letter card and update:
+- Letter title
+- Date
+- Preview text
+- Full content
 
-Follow these steps:
+### Adding New Messages  
+In `messages.html`, add new message bubbles with appropriate animation delays.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Adding New Date Invitations
+In `dates.html`, copy an existing date card and update:
+- Title and icon
+- Description
+- Location and time
+- Update the RSVP ID number
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Deployment
 
-# Step 3: Install the necessary dependencies.
-npm i
+Upload all files to your web server or GitHub Pages. The site is completely static and requires no backend.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## GitHub Pages Setup
 
-**Edit a file directly in GitHub**
+1. Create a new repository
+2. Upload all files to the repository
+3. Go to Settings > Pages
+4. Select "Deploy from a branch" and choose "main"
+5. Your site will be available at `https://username.github.io/repository-name`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8981b6b0-b39d-4df6-b1c3-d5f7464a338a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Made with ❤️ for someone special.

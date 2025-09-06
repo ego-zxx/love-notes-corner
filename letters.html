@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letters - Love Notes Corner</title>
+    <meta name="description" content="Heartfelt love letters written just for you">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Love Notes Corner</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="letters.html" class="nav-link active">Letters</a>
+                    <a href="messages.html" class="nav-link">Messages</a>
+                    <a href="dates.html" class="nav-link">Dates</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header fade-in">
+                <h1 class="page-title">Letters from My Heart</h1>
+                <p class="page-subtitle">
+                    Each letter is a piece of my soul, written just for you. 
+                    Click on any letter to read the full message of love.
+                </p>
+            </div>
+            
+            <div class="letters-grid">
+                <div class="letter-card fade-in" onclick="toggleLetter(this)" style="animation-delay: 0ms;">
+                    <div class="letter-header">
+                        <div class="letter-info">
+                            <h3 class="letter-title">My Dearest Love</h3>
+                            <div class="letter-date">📅 January 15, 2024</div>
+                        </div>
+                        <div class="letter-icon">💕</div>
+                    </div>
+                    <div class="letter-content">
+                        <div class="letter-preview">
+                            <p>Every morning when I wake up, the first thought that crosses my mind is you. Your smile, your laugh, the way you make everything better just by being there...</p>
+                            <p class="read-more">Click to read more...</p>
+                        </div>
+                        <div class="letter-full" style="display: none;">
+                            <p>Every morning when I wake up, the first thought that crosses my mind is you. Your smile, your laugh, the way you make everything better just by being there. I want you to know that you are my sunshine on cloudy days, my peace in chaos, and my greatest joy. Thank you for being the most amazing person I've ever known. I love you more than words could ever express, and I can't wait to create more beautiful memories with you.</p>
+                            <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); toggleLetter(this.closest('.letter-card'))">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="letter-card fade-in" onclick="toggleLetter(this)" style="animation-delay: 200ms;">
+                    <div class="letter-header">
+                        <div class="letter-info">
+                            <h3 class="letter-title">Forever Grateful</h3>
+                            <div class="letter-date">📅 January 10, 2024</div>
+                        </div>
+                        <div class="letter-icon">💕</div>
+                    </div>
+                    <div class="letter-content">
+                        <div class="letter-preview">
+                            <p>I've been thinking about all the little things you do that make my heart flutter. The way you laugh at my silly jokes, how you remember my favorite coffee order...</p>
+                            <p class="read-more">Click to read more...</p>
+                        </div>
+                        <div class="letter-full" style="display: none;">
+                            <p>I've been thinking about all the little things you do that make my heart flutter. The way you laugh at my silly jokes, how you remember my favorite coffee order, the gentle way you hold my hand when we're walking together. These moments might seem small, but they mean the world to me. You have this incredible ability to make ordinary days feel magical, and I am so grateful to have you in my life. You are my favorite person, my best friend, and my greatest love.</p>
+                            <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); toggleLetter(this.closest('.letter-card'))">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="letter-card fade-in" onclick="toggleLetter(this)" style="animation-delay: 400ms;">
+                    <div class="letter-header">
+                        <div class="letter-info">
+                            <h3 class="letter-title">Sweet Dreams</h3>
+                            <div class="letter-date">📅 January 5, 2024</div>
+                        </div>
+                        <div class="letter-icon">💕</div>
+                    </div>
+                    <div class="letter-content">
+                        <div class="letter-preview">
+                            <p>As you read this, I hope you know that you are loved beyond measure. Tonight, as you drift off to sleep, I want you to dream of all the adventures we'll have together...</p>
+                            <p class="read-more">Click to read more...</p>
+                        </div>
+                        <div class="letter-full" style="display: none;">
+                            <p>As you read this, I hope you know that you are loved beyond measure. Tonight, as you drift off to sleep, I want you to dream of all the adventures we'll have together, all the places we'll explore, and all the love we'll share. You are my dream come true, and I promise to love you with all my heart for all the days of my life. Sweet dreams, my beautiful angel. I can't wait to see your gorgeous smile tomorrow morning.</p>
+                            <button class="btn btn-outline btn-sm" onclick="event.stopPropagation(); toggleLetter(this.closest('.letter-card'))">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="letters.js"></script>
+</body>
+</html>
